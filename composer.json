@@ -3,11 +3,15 @@
     "description": "PHP blog test task",
     "type": "project",
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "smarty/smarty": "^4.5"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
         }
+    },
+    "scripts": {
+        "seed": "php database/seed.php"
     }
 }
