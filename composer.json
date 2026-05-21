@@ -12,6 +12,9 @@
         }
     },
     "scripts": {
-        "seed": "php database/seed.php"
+        "seed": "php database/seed.php",
+        "setup": [
+            "@php database/seed.php"
+        ]
     }
 }

@@ -1,0 +1,39 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    line-height: 1.6;
+    color: $color-text;
+    margin: 0;
+    background: $color-white;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    @include container;
+}
+
+.empty-state,
+.error-page__message {
+    @include text-muted;
+}
+
+.error-page__code {
+    margin: 0 0 $spacing-sm;
+    font-size: 4rem;
+}

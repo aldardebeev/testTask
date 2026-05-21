@@ -12,11 +12,23 @@ use App\Controller\HomeController;
 
 final class Router
 {
-    /** @var array{config: array<string, mixed>, smarty: \Smarty, pdo: \PDO} */
+    /** @var array{
+     *     config: array<string, mixed>,
+     *     smarty: \Smarty,
+     *     pdo: \PDO,
+     *     categoryRepository: \App\Repository\CategoryRepository,
+     *     articleRepository: \App\Repository\ArticleRepository
+     * } */
     private array $deps;
 
     /**
-     * @param array{config: array<string, mixed>, smarty: \Smarty, pdo: \PDO} $deps
+     * @param array{
+     *     config: array<string, mixed>,
+     *     smarty: \Smarty,
+     *     pdo: \PDO,
+     *     categoryRepository: \App\Repository\CategoryRepository,
+     *     articleRepository: \App\Repository\ArticleRepository
+     * } $deps
      */
     public function __construct(array $deps)
     {

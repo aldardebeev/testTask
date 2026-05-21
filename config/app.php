@@ -11,6 +11,6 @@ return [
         'cache_dir' => dirname(__DIR__) . '/storage/cache/smarty/cache',
     ],
     'pagination' => [
-        'per_page' => 10,
+        'per_page' => 6,
     ],
 ];

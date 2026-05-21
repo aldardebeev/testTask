@@ -9,7 +9,7 @@ final class SmartyFactory
     /**
      * @param array{template_dir: string, compile_dir: string, cache_dir: string} $config
      */
-    public static function create(array $config): \Smarty
+    public static function create(array $config, bool $debug = false): \Smarty
     {
         self::ensureDirectory($config['compile_dir']);
         self::ensureDirectory($config['cache_dir']);
@@ -18,6 +18,9 @@ final class SmartyFactory
         $smarty->setTemplateDir($config['template_dir']);
         $smarty->setCompileDir($config['compile_dir']);
         $smarty->setCacheDir($config['cache_dir']);
+        $smarty->caching = false;
+        $smarty->compile_check = $debug;
+        $smarty->escape_html = true;
 
         return $smarty;
     }

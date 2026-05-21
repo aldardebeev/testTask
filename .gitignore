@@ -1,4 +1,6 @@
 /vendor/
+/node_modules/
+public/assets/css/*.map
 /.env
 /storage/
 .idea/

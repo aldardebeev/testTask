@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+@mixin container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+@mixin card {
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    overflow: hidden;
+    background: $color-white;
+}
+
+@mixin text-muted {
+    color: $color-muted;
+}
+
+@mixin link-hover {
+    &:hover {
+        text-decoration: underline;
+    }
+}
